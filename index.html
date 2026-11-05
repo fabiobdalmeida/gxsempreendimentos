@@ -1,170 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GXS Empreendimentos & Estruturas</title>
-    <style>
-        /* Estilos Base e Identidade Visual */
-        :root {
-            --azul-escuro: #002244;
-            --azul-destaque: #0055A4;
-            --branco: #FFFFFF;
-            --preto: #111111;
-            --cinza-claro: #F4F4F4;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--cinza-claro);
-            color: var(--preto);
-            line-height: 1.6;
-        }
-
-        /* Navegação */
-        header {
-            background-color: var(--azul-escuro);
-            color: var(--branco);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            font-size: 0.9rem;
-            font-weight: normal;
-            display: block;
-            color: #CCCCCC;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: var(--branco);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--azul-destaque);
-        }
-
-        /* Seção Hero (Banner Principal) */
-        .hero {
-            background-color: var(--azul-escuro);
-            color: var(--branco);
-            text-align: center;
-            padding: 100px 20px;
-            /* Se for adicionar uma imagem de fundo depois, use:
-            background-image: url('sua-imagem-de-obra.jpg');
-            background-size: cover;
-            background-blend-mode: multiply; */
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-btn {
-            background-color: var(--azul-destaque);
-            color: var(--branco);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .cta-btn:hover {
-            background-color: #004080;
-        }
-
-        /* Seção de Serviços */
-        .servicos {
-            padding: 60px 5%;
-            text-align: center;
-            background-color: var(--branco);
-        }
-
-        .servicos h3 {
-            font-size: 2rem;
-            color: var(--azul-escuro);
-            margin-bottom: 40px;
-        }
-
-        .grid-servicos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card-servico {
-            background-color: var(--cinza-claro);
-            padding: 30px;
-            border-radius: 8px;
-            border-bottom: 4px solid var(--azul-destaque);
-        }
-
-        .card-servico h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--azul-escuro);
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--preto);
-            color: var(--branco);
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082746">
+  <meta name="description" content="A GXS desenvolve soluções em estruturas metálicas, galpões, mezaninos e coberturas. Atendimento no Sul de Minas, Grande São Paulo, Vale do Paraíba e Sul Fluminense.">
+  <title>GXS Empreendimentos &amp; Estruturas | Soluções em aço</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GXS Empreendimentos — página inicial">
+      <span class="brand-mark" aria-hidden="true">GXS</span>
+      <span class="brand-name">Empreendimentos <span>&amp; Estruturas</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <a aria-current="page" href="index.html">Início</a>
+      <a href="sobre.html">Sobre a GXS</a>
+      <a href="contato.html">Contato</a>
+      <a class="nav-cta" href="contato.html#orcamento">Solicitar orçamento</a>
+    </nav>
+  </header>
 
-    <header>
-        <div class="logo">
-            <h1>GXS</h1>
-            <span>Empreendimentos & Estruturas</span>
+  <main id="conteudo">
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Engenharia e estruturas metálicas</p>
+        <h1>Estruturas fortes.<br><span>Projetos que avançam.</span></h1>
+        <p class="hero-copy">Soluções em aço para galpões, mezaninos e coberturas, com atendimento próximo e foco nas necessidades de cada obra.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="contato.html#orcamento">Converse sobre seu projeto <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#servicos">Conheça nossos serviços</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre a GXS</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+        <p class="hero-note">Projetos a partir de 300 m² · Consulte a equipe sobre sua necessidade</p>
+      </div>
+      <div class="hero-stat" aria-label="Atuação regional">
+        <span class="stat-label">Atuação regional</span>
+        <span class="stat-value">MG <i>·</i> SP <i>·</i> RJ</span>
+      </div>
+    </section>
+
+    <section class="intro section-pad">
+      <div class="container intro-grid">
+        <div><p class="eyebrow eyebrow-dark">GXS Empreendimentos &amp; Estruturas</p><h2>Da ideia à estrutura,<br>com responsabilidade.</h2></div>
+        <div class="intro-copy"><p>Cada projeto tem um desafio próprio. A GXS atua com soluções de estruturas metálicas pensadas para apoiar operações industriais, comerciais e logísticas.</p><a class="text-link" href="sobre.html">Conheça a GXS <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="servicos">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow eyebrow-dark">O que fazemos</p><h2>Soluções para sua obra</h2></div><p>Estruturas planejadas de acordo com o uso, o local e os objetivos do projeto.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-number">01</span><div class="service-icon" aria-hidden="true">⌂</div><h3>Galpões industriais</h3><p>Estruturas metálicas para espaços industriais e logísticos, com atenção ao aproveitamento dos vãos e à operação do empreendimento.</p></article>
+          <article class="service-card"><span class="service-number">02</span><div class="service-icon" aria-hidden="true">▤</div><h3>Mezaninos e coberturas</h3><p>Alternativas para ampliar áreas úteis e proteger espaços com soluções metálicas duráveis e funcionais.</p></article>
+          <article class="service-card"><span class="service-number">03</span><div class="service-icon" aria-hidden="true">⌁</div><h3>Estruturas litorâneas</h3><p>Projetos para ambientes litorâneos, considerando a necessidade de proteção anticorrosiva adequada ao local.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="coverage section-pad">
+      <div class="container coverage-grid">
+        <div><p class="eyebrow">Onde atendemos</p><h2>Presença regional.<br>Atendimento próximo.</h2><p>Atendemos projetos no Sul de Minas, Grande São Paulo, Vale do Paraíba e Sul Fluminense, incluindo Angra dos Reis e Paraty.</p><a class="button button-outline" href="contato.html">Fale com a equipe <span aria-hidden="true">→</span></a></div>
+        <div class="region-list" aria-label="Regiões de atendimento"><div><span>01</span><strong>Sul de Minas</strong><small>Varginha e região</small></div><div><span>02</span><strong>Grande São Paulo</strong><small>Capital e entorno</small></div><div><span>03</span><strong>Vale do Paraíba</strong><small>SP e região</small></div><div><span>04</span><strong>Sul Fluminense</strong><small>Angra dos Reis, Paraty e região</small></div></div>
+      </div>
+    </section>
+
+    <section class="callout section-pad"><div class="container callout-inner"><div><p class="eyebrow">Vamos conversar?</p><h2>Conte um pouco sobre a sua obra.</h2><p>Compartilhe a região, o tipo de estrutura e a metragem estimada para iniciarmos o atendimento.</p></div><a class="button button-primary" href="contato.html#orcamento">Solicitar orçamento <span aria-hidden="true">→</span></a></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">GXS</span><span class="brand-name">Empreendimentos <span>&amp; Estruturas</span></span></a><p>Soluções em estruturas metálicas para o seu projeto.</p><div class="footer-links"><a href="sobre.html">Sobre a GXS</a><a href="contato.html">Contato</a></div></div>
+    <div class="container footer-bottom"><span>© <span data-current-year>2026</span> GXS Empreendimentos &amp; Estruturas. Todos os direitos reservados.</span><span>Atendimento: MG · SP · RJ</span></div>
+  </footer>
+</body>
+</html>
